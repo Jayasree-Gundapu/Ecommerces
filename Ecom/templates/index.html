@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+	{% for i in p %}
+    <div class="col-md-4">
+    	<a class="btn btn-outline-info btn-block" href="{% url 'Ecom:detail' i.id i.slug %}">{{i.title}}</a>
+      <br><br>
+     <img class="border rounded" src="{{i.img.url}}" width="270px" height="300px"> <br><br>&nbsp;
+     ₹{{i.price}}
+     <br><br>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
