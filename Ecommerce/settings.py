@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'Ecom',
+    'paypal.standard.ipn',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -63,6 +64,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'Ecom.myapp.item_count'
             ],
         },
     },
@@ -122,3 +124,5 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'
+
+PAYPA_TEST = True

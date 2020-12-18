@@ -10,7 +10,7 @@
 	<img src="{{d.img.url}}" width="300"height=300>
 </div>
 
-<form action="{{% url 'Ecom:detail' d.id d.slug %}" method="post">
+<form action="{% url 'Ecom:detail' d.id d.slug %}" method="post">
     {% csrf_token %}
     {{f}}
     <input class="btn btn-primary" type="submit" value="Add to cart">

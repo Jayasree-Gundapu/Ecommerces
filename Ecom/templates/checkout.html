@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<b>Cart:</b><br>
+{% for i in items %}
+{{i.product}} -&nbsp; {{i.quantity}} - &nbsp;
+₹{{i.price}}<br>
+{% endfor %}
+<br>
+<b>Pay:&nbsp;₹{{total}}</b>
+<br><br>
+<h6>Show me the money</h6>
+
+{{form.render}}
+{% endblock %}
